@@ -1,4 +1,4 @@
-# ucsas_intro_python
+# Introduction to Python (UCSAS Conference Workshop)
 
 - Aim at introducing and giving a quick around Python programming
 - In order to get the slides, once you download repository use `make all` or
