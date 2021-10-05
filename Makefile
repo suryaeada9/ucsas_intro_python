@@ -6,4 +6,4 @@ clean:
 	rm -f $(HTML_FILES) 
 
 %.slides.html: %.ipynb
-	jupyter nbconvert "$<" --to slides --post serve --SlidesExporter.reveal_theme=night --SlidesExporter.reveal_scroll=True --SlidesExporter.reveal_transition=none
+	jupyter nbconvert "$<" --to slides --SlidesExporter.reveal_theme=night --SlidesExporter.reveal_scroll=True --SlidesExporter.reveal_transition=none
