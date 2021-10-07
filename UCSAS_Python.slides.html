@@ -12998,8 +12998,13 @@ ul.typeahead-list  > li > a.pull-right {
 /*# sourceMappingURL=style.min.css.map */
     </style>
 <style type="text/css">
-    .highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f8f8f8; }
+    pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
@@ -13962,12 +13967,12 @@ None
 
 </div>
 </div>
-</div></section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Illustration:">Illustration:<a class="anchor-link" href="#Illustration:">&#182;</a></h3><p>The following is an illustration of obtaining objects of different data types.</p>
-<ul>
+<h3 id="Illustration:-Data-types--">Illustration: Data types -<a class="anchor-link" href="#Illustration:-Data-types--">&#182;</a></h3><p>The following is an illustration of obtaining objects of different data types.</p>
+<h4 id="String">String<a class="anchor-link" href="#String">&#182;</a></h4><ul>
 <li>String is an array of bytes representing unicode characters and thus elemets can be accessed.</li>
 <li>Multiline strings need three quotes and keep line breaks in tact while printing.</li>
 <li>Operators like <code>+</code> concatenates strings, <code>in</code> searches for membership</li>
@@ -13981,17 +13986,17 @@ None
 <li><code>capitalize()</code>: converts first character to upper case.</li>
 <li><code>casefold()</code>: converts string into lower case</li>
 <li><code>count('a')</code>: counts number of times a specified value occurs in a string.</li>
-<li><code>endswith()</code>, <code>startswith</code>, <code>find</code>, <code>index</code>, <code>isalphabet</code>, <code>isdigit</code></li>
+<li><code>endswith()</code>, <code>startswith()</code>, <code>find()</code>, <code>index()</code>, <code>isalphabet()</code>, <code>isdigit()</code> and many more.</li>
 </ul>
 </li>
 </ul>
 
 </div>
 </div>
-</div></section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[152]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Primitive type</span>
@@ -13999,26 +14004,6 @@ None
 <span class="c1"># String</span>
 <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;abcd&#39;</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;`</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">` is of type: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="c1"># multiline string</span>
-<span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;abcd</span>
-<span class="s1">let me show what line breaks do&#39;&#39;&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-
-<span class="c1"># string access and slicing</span>
-<span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;I am at UCSAS&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;`</span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">` is the first character in string x&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;`</span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span><span class="si">}</span><span class="s2">` are the next nine characters including spaces&quot;</span><span class="p">)</span>  <span class="c1"># from index 1 to index 9</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;`</span><span class="si">{</span><span class="n">x</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span><span class="si">}</span><span class="s2">` are the first four characters in x excluding index 4&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;`</span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span><span class="si">}</span><span class="s2">` are the characters from location 4 including till end&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;`</span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">` is the last character&quot;</span><span class="p">)</span>
-
-<span class="c1"># check string is Boolean</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;at&quot;</span> <span class="ow">in</span> <span class="n">x</span><span class="p">)</span>
-
-<span class="c1"># format</span>
-<span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;I am </span><span class="si">{}</span><span class="s2"> and I teach </span><span class="si">{}</span><span class="s2">&quot;</span>
-<span class="n">x</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Surya&#39;</span><span class="p">,</span> <span class="s1">&#39;Statistics&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14036,34 +14021,119 @@ None
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>`abcd` is of type: &lt;class &#39;str&#39;&gt;
-abcd
-let me show what line breaks do
-`I` is the first character in string x
-` am at UC` are the next nine characters including spaces
-`I am` are the first four characters in x excluding index 4
-` at UCSAS` are the characters from location 4 including till end
-`S` is the last character
-True
 </pre>
 </div>
 </div>
 
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># multiline string</span>
+<span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;abcd</span>
+<span class="s1">let me show what line breaks do&#39;&#39;&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[152]:</div>
+    <div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;I am Surya and I teach Statistics&#39;</pre>
-</div>
-
-</div>
-
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>abcd
+let me show what line breaks do
+</pre>
 </div>
 </div>
 
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># string access and slicing</span>
+<span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;I am at UCSAS&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;`</span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">` is the first character in string x&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;`</span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span><span class="si">}</span><span class="s2">` are the next nine characters including spaces&quot;</span><span class="p">)</span>  <span class="c1"># from index 1 to index 9</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;`</span><span class="si">{</span><span class="n">x</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span><span class="si">}</span><span class="s2">` are the first four characters in x excluding index 4&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;`</span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span><span class="si">}</span><span class="s2">` are the characters from location 4 including till end&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;`</span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">` is the last character&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>`I` is the first character in string x
+` am at UC` are the next nine characters including spaces
+`I am` are the first four characters in x excluding index 4
+` at UCSAS` are the characters from location 4 including till end
+`S` is the last character
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># check string for some</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;at&quot;</span> <span class="ow">in</span> <span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># format</span>
+<span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;I am </span><span class="si">{}</span><span class="s2"> and I teach </span><span class="si">{}</span><span class="s2">&quot;</span>
+<span class="n">x</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Surya&#39;</span><span class="p">,</span> <span class="s1">&#39;Statistics&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Illustration:-Data-types---int,-float,-complex,-bool">Illustration: Data types - <code>int, float, complex, bool</code><a class="anchor-link" href="#Illustration:-Data-types---int,-float,-complex,-bool">&#182;</a></h3><ul>
+<li>Integer, float, complex determine different kind of numbers in python.</li>
+<li>Boolean is a logical (True or False).</li>
+<li>Numbers can be cast from one type to other on Python (if <strong>"reasonable"</strong> conversion exist) using the syntax: <code>int(x), bool(x), float(x), complex(x)</code></li>
+</ul>
+
+</div>
+</div>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -14196,27 +14266,32 @@ True
 </div>
 </div>
 
-</div></div></section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Data-types-containing-multiple-objects:">Data types containing multiple objects:<a class="anchor-link" href="#Data-types-containing-multiple-objects:">&#182;</a></h3><ul>
-<li>In base python, we already have <code>list</code>, <code>tuple</code>, <code>range</code> for sequence like objects that allow repetitions while we have <code>set</code>, <code>dictionary</code> for objects that contain multiple items but without allowance for replacements.</li>
-<li>Note that the <code>indexing</code> for sequence like objects starts at <code>0</code> in Python and using index such as <code>x[0]</code>, value can be accessed.</li>
-<li>Sequence like objects can be accessed using index as <code>item[index]</code> to obtain element at a particular index.</li>
-<li><p><code>List</code> uses a <code>[]</code> whereas <code>tuple</code> uses a <code>()</code>, set uses a <code>{}</code>, dictionary also uses a <code>{key: value}</code> .</p>
+<li><p>In base python, we already have <code>list</code>, <code>tuple</code>, <code>range</code> for sequence like objects that allow repetitions while we have <code>set</code>, <code>dictionary</code> for objects that contain multiple items but without allowance for replacements.</p>
 </li>
-<li><p><code>List</code> is an immutable object containing a sequence of other objects where objects are of type <code>int</code>, <code>list</code>, or <code>functions</code>.</p>
-</li>
-<li><code>Set</code> has a collection of objects but without allowance for replacements. Also all objects in a set has to be simple or primitive and cannot have a list as an element.</li>
+<li><p><code>list</code>:</p>
+<ul>
+<li>Created using square brackets <code>x = [1, 2, [1,2], 1, "pen", True]</code></li>
+<li>Can contain any type of elements even a function.</li>
+<li>Indexed and Ordered as a sequence.</li>
+<li>Since indexed, it can contain repetitions.</li>
+<li>index starts with element 0, and continues unlike R.</li>
+<li>Elements can be accessed using index as <code>x[0], x[-1], x[0:3], x[:2], x[2:]</code>s</li>
+<li>Elements can be modified using <code>x[1:3] = ["UCSAS", [1,2,3]]</code></li>
+<li>Mutable: Changes easily at the same address.</li>
+<li>Uses <em> to unpack elements (similar to tuples) pointwise except the </em> element can be assigned a list. For example <code>(a, *b, c) = ('a', [1, 2], 'c', 'd')</code>. In this case variable <code>b</code> points to <code>[[1, 2], 'c']</code></li>
+<li>Methods: <code>len(x): length</code>, <code>x.insert(2, "Python")</code>, <code>x.append("Python")</code>, <code>x.remove([1, 2])</code>, <code>x.pop(1)</code>,<code>del x[1]</code>, <code>x.clear()</code>, <code>x.sort()</code>, <code>y = x.copy()</code>, <code>x.extend(y)</code></li>
 </ul>
-<h4 id="Mapping-object">Mapping object<a class="anchor-link" href="#Mapping-object">&#182;</a></h4><ul>
-<li><code>dict</code> allows a mapping of an immutable key to any kind of objects. This is slightly different as it is also a mapping kind of object</li>
+</li>
 </ul>
 
 </div>
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[114]:</div>
@@ -14226,8 +14301,26 @@ True
 <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;abc&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> is of type: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
+<span class="c1"># Indexing</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;element in x at index 0 is </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Slicing</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;sliced elements between locations 0 and 3(until location 2) is </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="c1">## list of functions</span>
+<span class="k">def</span> <span class="nf">a</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">b</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="n">z</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">]</span>
+<span class="p">[</span><span class="n">x</span><span class="p">(</span><span class="s1">&#39;123&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">z</span><span class="p">]</span>
+
+<span class="c1">## Use of asterik *</span>
+<span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]</span>
+<span class="n">b</span>
 </pre></div>
 
     </div>
@@ -14254,56 +14347,43 @@ sliced elements between locations 0 and 3(until location 2) is [1, 2, &#39;abc&#
 </div>
 </div>
 
-</div></div><div class="fragment">
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Data-types-containing-multiple-objects:">Data types containing multiple objects:<a class="anchor-link" href="#Data-types-containing-multiple-objects:">&#182;</a></h3><ul>
+<li><code>tuple</code>:<ul>
+<li>Created using ().</li>
+<li>An equivalent of list but immutable and thus cannot change easily.</li>
+<li>Accessing is similar to lists.</li>
+<li>Adding an item may require converting to list, making modification and casting it into a tuple or adding a tuple consisting of on item that need to be added.</li>
+<li>Removing also needs converting to list and removing an element.</li>
+<li>Methods:  <code>len(x)</code>, <code>x.count('a')</code>, <code>x.index()</code></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[115]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## list of functions</span>
-<span class="k">def</span> <span class="nf">a</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-
-<span class="k">def</span> <span class="nf">b</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-
-<span class="n">z</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">]</span>
-<span class="p">[</span><span class="n">x</span><span class="p">(</span><span class="s1">&#39;123&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">z</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[115]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;1&#39;, &#39;2&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[116]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># tuple `immutable equivalent of list`</span>
-<span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="s2">&quot;abc&quot;</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;abc&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> is element of type: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1">## Slicing or accessing</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+
+<span class="c1">## Try</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span> <span class="o">+</span> <span class="p">(</span><span class="mi">2</span><span class="p">,))</span>   <span class="c1">## creating a one element tuple needs a , at the end.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1">## Methods</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14320,7 +14400,11 @@ sliced elements between locations 0 and 3(until location 2) is [1, 2, &#39;abc&#
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(1, 2, [1, 2], &#39;abc&#39;) is element of type: &lt;class &#39;tuple&#39;&gt;
+<pre>(1, 2, [1, 2], 1, &#39;abc&#39;) is element of type: &lt;class &#39;tuple&#39;&gt;
+(2, [1, 2])
+(1, 2, [1, 2], 1, &#39;abc&#39;, 2)
+(1, 2, [1, 2], 1, &#39;abc&#39;, 1, 2, [1, 2], 1, &#39;abc&#39;)
+2
 </pre>
 </div>
 </div>
@@ -14328,10 +14412,24 @@ sliced elements between locations 0 and 3(until location 2) is [1, 2, &#39;abc&#
 </div>
 </div>
 
-</div></div><div class="fragment">
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Data-types-containing-multiple-objects:">Data types containing multiple objects:<a class="anchor-link" href="#Data-types-containing-multiple-objects:">&#182;</a></h3><ul>
+<li><code>range</code>:<ul>
+<li>This is an object similar to list except containing sequential range of integers. </li>
+<li>Can be created while using <code>range(start, stop, step)</code> where step is an integer.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[117]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># range(## start, stop, step). Also step can only be integers. This gives i, i+1, ... j-1</span>
@@ -14361,15 +14459,47 @@ sliced elements between locations 0 and 3(until location 2) is [1, 2, &#39;abc&#
 </div>
 </div>
 
-</div></div><div class="fragment">
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Data-types-containing-multiple-objects:">Data types containing multiple objects:<a class="anchor-link" href="#Data-types-containing-multiple-objects:">&#182;</a></h3><ul>
+<li><code>set</code>:<ul>
+<li>Created using {}</li>
+<li>Objects within the set can only be simple types or a tuple.</li>
+<li>Set is not ordered or indexed</li>
+<li>does not allow replacements</li>
+<li>accessing is only possible while looping through values in a set</li>
+<li>is mutable and can change easily but not with the usual ways of accessing</li>
+<li><code>.add()</code> allows to add an element, <code>.update()</code> allows to append set to a set or a list removing duplicates</li>
+<li><code>.remove()</code> or <code>.discard()</code>, <code>.pop()</code></li>
+<li><code>.union()</code>, <code>.update()</code>, <code>.intersection()</code>, <code>.symmetric_difference()</code>, <code>.intersection_update()</code> , <code>.symmetric_difference_update()</code></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># set</span>
 <span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ab&quot;</span><span class="p">,</span> <span class="s2">&quot;cd&quot;</span><span class="p">,</span> <span class="s2">&quot;ed&quot;</span><span class="p">,</span> <span class="s2">&quot;ab&quot;</span><span class="p">}</span>
-<span class="n">x</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1">## accessing</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])</span>
+
+<span class="c1"># .symmetric_differencee</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ab&#39;</span><span class="p">,</span> <span class="s1">&#39;an&#39;</span><span class="p">,</span> <span class="s1">&#39;bc&#39;</span><span class="p">,</span> <span class="s1">&#39;ed&#39;</span><span class="p">}</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">symmetric_difference</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">{(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14382,21 +14512,43 @@ sliced elements between locations 0 and 3(until location 2) is [1, 2, &#39;abc&#
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[118]:</div>
+    <div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;ab&#39;, &#39;cd&#39;, &#39;ed&#39;}</pre>
-</div>
-
-</div>
-
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;ab&#39;, &#39;ed&#39;, &#39;cd&#39;}
+[&#39;ab&#39;, &#39;ed&#39;, &#39;cd&#39;]
+{&#39;cd&#39;, &#39;an&#39;, &#39;bc&#39;}
+{(2, 3), (1, 2)}
+</pre>
 </div>
 </div>
 
-</div></div><div class="fragment">
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Data-types-containing-multiple-objects:">Data types containing multiple objects:<a class="anchor-link" href="#Data-types-containing-multiple-objects:">&#182;</a></h3><ul>
+<li><code>dict</code>:<ul>
+<li>dictionary is a mapping of keys to certain values.</li>
+<li>dict is created explicitly using <code>{key1:value1, key2:value2}</code></li>
+<li>dict keys are immutable, does not allow replacements and should be like a <code>frozenset</code></li>
+<li>duplicate values of key will replace the original</li>
+<li>dictionary values can be mutable or immutable object and can also allow for replacement.</li>
+<li>dict can also be created using zip function on a set and list as: <code>dict(zip(set1, list1))</code></li>
+<li>although not sequenced, it can be thought of having an index as the key and thus accessing a value can be done using the key.</li>
+<li>accessing elements in dict can happen using <code>dict[key]</code> to obtain value.</li>
+<li>accessing all keys can be done using <code>dict.keys()</code> and accessing all values can be done using <code>dict.values()</code>.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[120]:</div>
@@ -14426,114 +14578,6 @@ sliced elements between locations 0 and 3(until location 2) is [1, 2, &#39;abc&#
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>{&#39;a&#39;: [2, 4], &#39;b&#39;: (2, 3), &#39;c&#39;: [1, 5]}
 </pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Methods-for-each-data-type">Methods for each data type<a class="anchor-link" href="#Methods-for-each-data-type">&#182;</a></h2><ul>
-<li>Every data type has certain built in methods defined based on characteristics of data type such as mutability, repetitions, kind of elements it can contain.</li>
-<li><p>A method is often applied at the end of name of the variable and that is what makes Python readable like English.</p>
-</li>
-<li><p>Int:</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[125]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">methods</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="p">{</span><span class="n">method</span> <span class="k">for</span> <span class="n">method</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">if</span> <span class="n">method</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;__&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">}</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="c1"># primitive object methods</span>
-<span class="n">methods</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-<span class="n">methods</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
-<span class="n">methods</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
-<span class="n">methods</span><span class="p">(</span><span class="nb">complex</span><span class="p">)</span>
-<span class="n">methods</span><span class="p">(</span><span class="nb">bool</span><span class="p">)</span>
-
-<span class="c1"># methods for objects containing multiple objects</span>
-<span class="n">methods</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
-<span class="n">methods</span><span class="p">(</span><span class="nb">tuple</span><span class="p">)</span>
-<span class="n">methods</span><span class="p">(</span><span class="nb">set</span><span class="p">)</span>
-<span class="n">methods</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;class &#39;int&#39;&gt;:{&#39;conjugate&#39;, &#39;bit_length&#39;, &#39;as_integer_ratio&#39;, &#39;to_bytes&#39;, &#39;denominator&#39;, &#39;imag&#39;, &#39;real&#39;, &#39;from_bytes&#39;, &#39;numerator&#39;}
-&lt;class &#39;float&#39;&gt;:{&#39;conjugate&#39;, &#39;as_integer_ratio&#39;, &#39;hex&#39;, &#39;imag&#39;, &#39;fromhex&#39;, &#39;real&#39;, &#39;is_integer&#39;}
-&lt;class &#39;str&#39;&gt;:{&#39;rsplit&#39;, &#39;islower&#39;, &#39;maketrans&#39;, &#39;replace&#39;, &#39;encode&#39;, &#39;isspace&#39;, &#39;capitalize&#39;, &#39;endswith&#39;, &#39;isdecimal&#39;, &#39;swapcase&#39;, &#39;rstrip&#39;, &#39;splitlines&#39;, &#39;isdigit&#39;, &#39;rjust&#39;, &#39;format_map&#39;, &#39;istitle&#39;, &#39;lower&#39;, &#39;translate&#39;, &#39;format&#39;, &#39;split&#39;, &#39;upper&#39;, &#39;isidentifier&#39;, &#39;rfind&#39;, &#39;expandtabs&#39;, &#39;partition&#39;, &#39;isascii&#39;, &#39;join&#39;, &#39;startswith&#39;, &#39;rpartition&#39;, &#39;isalnum&#39;, &#39;rindex&#39;, &#39;title&#39;, &#39;ljust&#39;, &#39;isprintable&#39;, &#39;isalpha&#39;, &#39;index&#39;, &#39;strip&#39;, &#39;center&#39;, &#39;isnumeric&#39;, &#39;lstrip&#39;, &#39;count&#39;, &#39;casefold&#39;, &#39;find&#39;, &#39;isupper&#39;, &#39;zfill&#39;}
-&lt;class &#39;complex&#39;&gt;:{&#39;conjugate&#39;, &#39;imag&#39;, &#39;real&#39;}
-&lt;class &#39;bool&#39;&gt;:{&#39;conjugate&#39;, &#39;bit_length&#39;, &#39;as_integer_ratio&#39;, &#39;to_bytes&#39;, &#39;denominator&#39;, &#39;imag&#39;, &#39;real&#39;, &#39;from_bytes&#39;, &#39;numerator&#39;}
-&lt;class &#39;list&#39;&gt;:{&#39;append&#39;, &#39;insert&#39;, &#39;remove&#39;, &#39;index&#39;, &#39;count&#39;, &#39;copy&#39;, &#39;extend&#39;, &#39;reverse&#39;, &#39;sort&#39;, &#39;clear&#39;, &#39;pop&#39;}
-&lt;class &#39;tuple&#39;&gt;:{&#39;index&#39;, &#39;count&#39;}
-&lt;class &#39;set&#39;&gt;:{&#39;update&#39;, &#39;remove&#39;, &#39;difference&#39;, &#39;add&#39;, &#39;discard&#39;, &#39;intersection&#39;, &#39;symmetric_difference&#39;, &#39;symmetric_difference_update&#39;, &#39;difference_update&#39;, &#39;intersection_update&#39;, &#39;copy&#39;, &#39;union&#39;, &#39;issubset&#39;, &#39;isdisjoint&#39;, &#39;clear&#39;, &#39;pop&#39;, &#39;issuperset&#39;}
-&lt;class &#39;dict&#39;&gt;:{&#39;setdefault&#39;, &#39;update&#39;, &#39;values&#39;, &#39;fromkeys&#39;, &#39;get&#39;, &#39;popitem&#39;, &#39;copy&#39;, &#39;items&#39;, &#39;keys&#39;, &#39;clear&#39;, &#39;pop&#39;}
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[131]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.2</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">complex</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">conjugate</span><span class="p">())</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-131-fb0b536e9f4b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> x <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">1</span> <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">2j</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>float<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">.</span>conjugate<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">TypeError</span>: can&#39;t convert complex to float</pre>
 </div>
 </div>
 
@@ -14621,50 +14665,6 @@ sliced elements between locations 0 and 3(until location 2) is [1, 2, &#39;abc&#
 4582558512
 4582376688
 Error obtained
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[112]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Exception on Mutations: list within tuples</span>
-<span class="n">x</span> <span class="o">=</span> <span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="s2">&quot;str&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>  <span class="c1">## list is immutable, stays in same location</span>
-<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>([1, 2], &#39;str&#39;)
-4572223872
-4582660224
-([1, 2, 3], &#39;str&#39;)
-4572223872
-4582660224
 </pre>
 </div>
 </div>
@@ -14766,6 +14766,8 @@ True
 <li><code>in, not in</code></li>
 </ul>
 </li>
+<li><p><strong>Note</strong> some operators like add, multiply does a different task on lists than a pointwise addition.</p>
+</li>
 </ul>
 
 </div>
@@ -14786,10 +14788,10 @@ True
 
 </div>
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[134]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Integer to Float</span>
@@ -14804,6 +14806,12 @@ True
 <span class="c1">## List to Integer</span>
 <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">x</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+
+<span class="c1"># Use of * in unpacking</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">a</span><span class="p">,</span> <span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">x</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14823,6 +14831,8 @@ True
 <pre>1.0
 (1+0j)
 1
+2
+[2, 3]
 </pre>
 </div>
 </div>
@@ -14830,10 +14840,10 @@ True
 </div>
 </div>
 
-</div></div></section><section>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[135]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># list to a set</span>
@@ -14860,19 +14870,500 @@ True
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>{1, 2, &#39;a&#39;, (1+2j)}
+444 ns ± 17.2 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Conditionals">Conditionals<a class="anchor-link" href="#Conditionals">&#182;</a></h2><h3 id="If,-Elif,-Else">If, Elif, Else<a class="anchor-link" href="#If,-Elif,-Else">&#182;</a></h3><ul>
+<li>The conditionals should be based on a logical input such as <code>==</code>, <code>&gt;=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>is</code>, <code>is not</code>, <code>in</code>, <code>not in</code>.</li>
+<li>They can be written in one line if the statement has only one statement.</li>
+<li>An <code>if</code> statement cannot be empty. If it has to be, use <code>pass</code></li>
+<li>If condition are to result in more than two cases, use <code>elif</code></li>
+<li><code>and</code> or <code>or</code> can be used for the conditional.</li>
+<li>At the end of the condition to verify, use a <code>:</code> and then if a new line is used, use <strong>indentation</strong>.</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## checking three scores and using `and`.</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">90</span>
+
+<span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="ow">and</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">c</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a is first&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">c</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;c is first&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b is first&#39;</span><span class="p">)</span>
+
+<span class="c1">## checking between two scores in one line</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">70</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a is first&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="k">else</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b is first&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>c is first
+b is first
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Loops">Loops<a class="anchor-link" href="#Loops">&#182;</a></h2><h3 id="while-loop:"><code>while</code> loop:<a class="anchor-link" href="#while-loop:">&#182;</a></h3><ul>
+<li>Indentation and <code>:</code> are required.</li>
+<li>It runs as long as a condition is true. Careful as it can run into an infinte loop if condition never gets satisfied.</li>
+<li><code>break</code> and <code>continue</code> allows to either break or continue based on a condition within the loop.</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># if i += 1 is not given i would always be 0 and it will </span>
+<span class="c1"># print infinite number of messages and not break unless you use break.</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;usual&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">10</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;amazing&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;usual&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">5</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;exit&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;exit&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;process going on at step </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;amazing&#39;</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;something amazing happened at </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> step&#39;</span><span class="p">)</span>
+        <span class="k">continue</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;process stopped at step </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;usual&#39;, &#39;usual&#39;, &#39;usual&#39;, &#39;usual&#39;, &#39;usual&#39;, &#39;usual&#39;, &#39;usual&#39;, &#39;usual&#39;, &#39;usual&#39;, &#39;usual&#39;, &#39;amazing&#39;, &#39;usual&#39;, &#39;usual&#39;, &#39;usual&#39;, &#39;usual&#39;, &#39;usual&#39;, &#39;exit&#39;]
+process going on at step 0
+process going on at step 1
+process going on at step 2
+process going on at step 3
+process going on at step 4
+process going on at step 5
+process going on at step 6
+process going on at step 7
+process going on at step 8
+process going on at step 9
+something amazing happened at 10 step
+process going on at step 10
+process going on at step 11
+process going on at step 12
+process going on at step 13
+process going on at step 14
+process going on at step 15
+process stopped at step 16
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="for-loop"><code>for</code> loop<a class="anchor-link" href="#for-loop">&#182;</a></h3><ul>
+<li>Used to iterate over a sequence.</li>
+<li><code>range()</code> function is often used to create a sequence of integers for the <code>for</code> loop to run.</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># count number of steps process was usual:</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">temp</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">temp</span> <span class="o">==</span> <span class="s1">&#39;usual&#39;</span><span class="p">:</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+
+<span class="c1"># using the range function</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;usual&#39;</span><span class="p">:</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>15
+15
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="function,-Scope"><code>function</code>, Scope<a class="anchor-link" href="#function,-Scope">&#182;</a></h2><ul>
+<li>A function is defined using keywords <code>def</code> followed by function name and arguments within paranthesis.</li>
+<li>This should be followed by <code>:</code> and indentation.</li>
+<li>A function should either print or return some value. Else <code>pass</code> should be used to avoid error.</li>
+<li>Often when we use functions to obtain values and store them in another variable, we need a return statement.</li>
+<li><strong>Scope</strong>: A variable created inside a function has only local scope which means it can only be used inside the function. It can be accessed by another function if it is within the previous function.</li>
+<li><p>A variable created in the main body has global scope. A global scope variable can be created inside a function using the keyword <code>global</code></p>
+</li>
+<li><p>A <code>lamdba</code> is a small anonymous function which returns the result in the same line (a useful property).</p>
+</li>
+</ul>
+<h4 id="%timeit"><code>%timeit</code><a class="anchor-link" href="#%timeit">&#182;</a></h4><ul>
+<li>%timeit is a magic function in Python that evaluates time taken based on 1000 runs for optimizing time. Number of runs can also be changed</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fib_rs</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">==</span><span class="mi">1</span> <span class="ow">or</span> <span class="n">n</span><span class="o">==</span><span class="mi">2</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">fib_rs</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib_rs</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="o">%</span><span class="k">timeit</span> fib_rs(10)    
+
+<span class="k">def</span> <span class="nf">n_multiplier</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="k">lambda</span> <span class="n">a</span> <span class="p">:</span> <span class="n">a</span> <span class="o">*</span> <span class="n">n</span>
+
+<span class="n">tripling</span> <span class="o">=</span> <span class="n">n_multiplier</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1">## returns an anonymous function</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tripling</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>         <span class="c1">## also saves from having 2 inputs (think of likelihood with parameter and data)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>13 µs ± 213 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+12
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="class-for-objects"><code>class</code> for objects<a class="anchor-link" href="#class-for-objects">&#182;</a></h2><ul>
+<li>A class is a blueprint for objects</li>
+<li>It defines ways to initiate an object of the made up class, functions for various properties, methods, etc.</li>
+<li><strong>init</strong>(self, x, y) is a function that exists for all classes to initiate values to the class.</li>
+<li>Methods are defined for the object class using functions with parameter self and more within the class.</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Gene</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">creationid</span><span class="p">,</span> <span class="n">creationseq</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">creationid</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">seq</span> <span class="o">=</span> <span class="n">creationseq</span>
+    
+    <span class="k">def</span> <span class="nf">length</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)))</span>
+    
+    <span class="c1"># search for first instance</span>
+    <span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">searchseq</span><span class="p">):</span>
+        <span class="k">return</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">searchseq</span><span class="p">))</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">Gene</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;AGTCATCGAACTG&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">length</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;AA&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>13
+8
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Modules-in-Python">Modules in Python<a class="anchor-link" href="#Modules-in-Python">&#182;</a></h2><p>Many new data types, functions are written already in many modules and thus modules serve as a great resource to avoid creating from scratch.</p>
+<ul>
+<li><p>Install:</p>
+<ul>
+<li>With <code>anaconda</code>, most important modules are already installed.</li>
+<li>If not, as long as you have pip or conda, we can use <code>! pip install module1</code> to install module named <code>module1</code> from Jupyter notebook.</li>
+</ul>
+</li>
+<li><p>Import</p>
+</li>
+<li>Use functions</li>
+</ul>
+<ul>
+<li>Every installed module need to be imported. You can also import a set of functions sometimes to avoid using more space. </li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="numpy-basic"><code>numpy</code> basic<a class="anchor-link" href="#numpy-basic">&#182;</a></h2><ul>
+<li><code>numpy</code> is known for arrays, random number generators, and ufuncs</li>
+<li>arrays are homogeneous set of values</li>
+<li>Although python doesn't have a concept of array, numpy module allows for creation of multidimensional arrays and also many respective functions.</li>
+<li>Often while importing <code>numpy</code> is aliased as <code>np</code> using:<ul>
+<li><code>import numpy as np</code></li>
+</ul>
+</li>
+<li>In order to <strong>create</strong> a numpy array, we use: <ul>
+<li><code>np.array([]), np.array([[],[]]), np.empty(shape = (3, 4)), np.zeros(), np.ones(), np.arange(), np.eye()</code></li>
+</ul>
+</li>
+<li>In order to <strong>access</strong> elements in an array x:<ul>
+<li><code>x[1], x[0:2], x[-1:-3], x[:, 1:3]</code></li>
+</ul>
+</li>
+<li><strong>Stacking</strong> by rows or columns (like rbind, cbind) and <strong>splitting</strong><ul>
+<li><code>np.stack(), np.hstack(), np.vstack(), np.array_split()</code></li>
+</ul>
+</li>
+<li><strong>Shape or reshape</strong>: Allows to even change from 1-D to 3-D or viceversa.<ul>
+<li><code>arr.reshape(), arr.shape()</code></li>
+</ul>
+</li>
+<li><strong>Iteration</strong>: <ul>
+<li><code>np.nditer()</code> or</li>
+<li>
+<pre><code>  for x in arr:
+    for y in x:
+      print(y)</code></pre>
+</li>
+</ul>
+</li>
+<li><strong>Searching</strong>:<ul>
+<li><code>np.where()</code></li>
+</ul>
+</li>
+<li><strong>Filtering</strong>:<ul>
+<li><code>arr[arr &gt; 42]</code></li>
+</ul>
+</li>
+<li><strong>Methods</strong>: using <code>axis = 0</code> for row operation, <code>axis = 1</code> for column operation.<ul>
+<li><code>.sum(), .min(), .max(), .flatten(), .ravel(), .copy()</code></li>
+</ul>
+</li>
+<li><strong>functions</strong>: Ufuncs that are applicable on the entire np array are created<ul>
+<li><code>np.unique(), np.add(), np.multiply(), np.cross(), np.dot(), np.transpose()</code></li>
+<li><code>np.exp(), np.std(), np.mean(), np.average(), np.percentile(), np.median(), np.log(), np.sin(), np.power()</code></li>
+</ul>
+</li>
+<li><strong>Creating a structured array</strong>: Using dtype as a list of tuples of name and format, one can create a structured array in np.</li>
+</ul>
+<h3 id="Random-sub-module">Random sub-module<a class="anchor-link" href="#Random-sub-module">&#182;</a></h3><ul>
+<li><code>random</code> sub module consists of functions like <ul>
+<li><code>random.rand()</code> for uniform</li>
+<li><code>random.choice()</code> from a sample </li>
+<li><code>random.randint()</code> for integers</li>
+<li><code>random.normal()</code> for normal</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[108]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">arr1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="n">arr2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">arr2</span><span class="p">)</span>
+
+
+<span class="n">arr2</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">arr3</span> <span class="o">=</span> <span class="n">arr2</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">arr3</span>
+
+
+<span class="c1">## structured array:</span>
+<span class="n">data1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;U20&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;cyl&#39;</span><span class="p">,</span> <span class="s1">&#39;i4&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;mpg&#39;</span><span class="p">,</span> <span class="s1">&#39;f8&#39;</span><span class="p">)])</span>
+<span class="n">data1</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;Honda Civic&#39;</span><span class="p">,</span> <span class="s1">&#39;Toyota Corolla&#39;</span><span class="p">,</span> <span class="s1">&#39;Ferrari Dino&#39;</span><span class="p">,</span> <span class="s1">&#39;Lincoln Continental&#39;</span><span class="p">]</span>
+<span class="n">data1</span><span class="p">[</span><span class="s1">&#39;cyl&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">data1</span><span class="p">[</span><span class="s1">&#39;mpg&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">30.4</span><span class="p">,</span> <span class="mf">33.9</span><span class="p">,</span> <span class="mf">19.7</span><span class="p">,</span> <span class="mf">10.4</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data1</span><span class="p">)</span>
+
+<span class="c1">## random sub-module of numpy</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">random</span>
+<span class="c1"># !pip install seaborn</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span> <span class="c1"># plotting</span>
+
+<span class="c1">## generate random normal and show plot</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[1 4 2 3]
+ [1 3 4 1]]
+[(&#39;Honda Civic&#39;, 4, 30.4) (&#39;Toyota Corolla&#39;, 4, 33.9)
+ (&#39;Ferrari Dino&#39;, 6, 19.7) (&#39;Lincoln Continental&#39;, 8, 10.4)]
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[135]:</div>
+    <div class="prompt output_prompt">Out[108]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{1: 1, 2: 2, &#39;a&#39;: (1+2j), (1+2j): &#39;a&#39;}</pre>
+<pre>&lt;seaborn.axisgrid.FacetGrid at 0x1354f6640&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
 </div>
 
 </div>
@@ -14880,53 +15371,193 @@ True
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Conditionals">Conditionals<a class="anchor-link" href="#Conditionals">&#182;</a></h2><p>-</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Loops">Loops<a class="anchor-link" href="#Loops">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Functions,-Scope">Functions, Scope<a class="anchor-link" href="#Functions,-Scope">&#182;</a></h2>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Modules-in-Python">Modules in Python<a class="anchor-link" href="#Modules-in-Python">&#182;</a></h2><ul>
-<li>Install</li>
-<li>Import</li>
-<li>Use functions</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="numpy"><code>numpy</code><a class="anchor-link" href="#numpy">&#182;</a></h2><h2 id="--Numpy-is-known-for-arrays,-random-number-generators">- Numpy is known for arrays, random number generators<a class="anchor-link" href="#--Numpy-is-known-for-arrays,-random-number-generators">&#182;</a></h2>
-</div>
-</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="pandas"><code>pandas</code><a class="anchor-link" href="#pandas">&#182;</a></h2><ul>
-<li>Pandas are known for data frames with row names and column names similar to R <code>dplyr</code></li>
+<li>Pandas are mostly known for data frames with row names and column names.</li>
+<li>The main data types here are: <code>pd.Series()</code>, <code>pd.DataFrame()</code>,<code>pd.Index()</code></li>
+<li>Series is an analog of a one-dimensional array with flexible indices, a DataFrame is an analog of a two-dimensional array with both flexible row indices and flexible column names</li>
+<li>DataFrame as a sequence of aligned Series objects. Here, by “aligned” we mean that they share the same index.</li>
+<li>Pandas index is an immutable array. It is like an array in many ways but cannot be modified unlike numpy arrays.</li>
+<li><code>iloc</code>, <code>loc</code> are important methods.</li>
+<li><code>read_csv('filename.csv', header  = 0)</code></li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[120]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+<span class="n">data</span><span class="o">.</span><span class="n">values</span>
+<span class="n">data</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[120]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>population</th>
+      <th>density</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>California</th>
+      <td>38332521</td>
+      <td>90.413926</td>
+    </tr>
+    <tr>
+      <th>Texas</th>
+      <td>26448193</td>
+      <td>38.018740</td>
+    </tr>
+    <tr>
+      <th>New York</th>
+      <td>19651127</td>
+      <td>139.076746</td>
+    </tr>
+    <tr>
+      <th>Florida</th>
+      <td>19552860</td>
+      <td>114.806121</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Data Frame</span>
+<span class="n">population_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;California&#39;</span><span class="p">:</span> <span class="mi">38332521</span><span class="p">,</span>
+ <span class="s1">&#39;Texas&#39;</span><span class="p">:</span> <span class="mi">26448193</span><span class="p">,</span>
+ <span class="s1">&#39;New York&#39;</span><span class="p">:</span> <span class="mi">19651127</span><span class="p">,</span>
+ <span class="s1">&#39;Florida&#39;</span><span class="p">:</span> <span class="mi">19552860</span><span class="p">,</span>
+ <span class="s1">&#39;Illinois&#39;</span><span class="p">:</span> <span class="mi">12882135</span><span class="p">}</span>
+<span class="n">population</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">population_dict</span><span class="p">)</span>
+
+<span class="n">population</span><span class="p">[</span><span class="s1">&#39;California&#39;</span><span class="p">:</span><span class="s1">&#39;Florida&#39;</span><span class="p">]</span>
+
+<span class="n">area_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;California&#39;</span><span class="p">:</span> <span class="mi">423967</span><span class="p">,</span> <span class="s1">&#39;Texas&#39;</span><span class="p">:</span> <span class="mi">695662</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">:</span> <span class="mi">141297</span><span class="p">,</span>
+ <span class="s1">&#39;Florida&#39;</span><span class="p">:</span> <span class="mi">170312</span><span class="p">,</span> <span class="s1">&#39;Illinois&#39;</span><span class="p">:</span> <span class="mi">149995</span><span class="p">}</span>
+<span class="n">area</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">area_dict</span><span class="p">)</span>
+
+<span class="c1">## A dataframe is a dictionary with keys as column names and values as pd.Series</span>
+<span class="n">states</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;population&#39;</span><span class="p">:</span> <span class="n">population</span><span class="p">,</span>
+ <span class="s1">&#39;area&#39;</span><span class="p">:</span> <span class="n">area</span><span class="p">})</span>
+
+<span class="n">states</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## index</span>
+<span class="n">ind</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Index</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">])</span>
+<span class="n">ind</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">ind</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="s2">&quot;Error found&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">states</span><span class="p">[</span><span class="s1">&#39;density&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="n">states</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">states</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span>
+<span class="n">states</span>
+
+
+<span class="c1">## implicit and explicit index</span>
+<span class="n">states</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">states</span><span class="o">.</span><span class="n">loc</span><span class="p">[:</span><span class="s1">&#39;Florida&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">,</span> <span class="s1">&#39;density&#39;</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;filename.csv&#39;</span><span class="p">,</span> <span class="n">header</span>  <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="scipy"><code>scipy</code><a class="anchor-link" href="#scipy">&#182;</a></h2><ul>
+<li>stats package in scipy has all statistical functions</li>
+<li>Usual statistical models</li>
+<li>optimize function.</li>
 </ul>
 
 </div>
@@ -14935,21 +15566,21 @@ True
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="scipy"><code>scipy</code><a class="anchor-link" href="#scipy">&#182;</a></h2><h2 id="--stats-package-in-scipy-has-all-statistical-functions">- stats package in scipy has all statistical functions<a class="anchor-link" href="#--stats-package-in-scipy-has-all-statistical-functions">&#182;</a></h2>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="matplotlib"><code>matplotlib</code><a class="anchor-link" href="#matplotlib">&#182;</a></h2>
+<h2 id="Data-Visualization:">Data Visualization:<a class="anchor-link" href="#Data-Visualization:">&#182;</a></h2><ul>
+<li><code>seaborn</code></li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Miscellaneous">Miscellaneous<a class="anchor-link" href="#Miscellaneous">&#182;</a></h2><h2 id="--scikit-">- scikit <a class="anchor-link" href="#--scikit-">&#182;</a></h2>
+<h2 id="Miscellaneous">Miscellaneous<a class="anchor-link" href="#Miscellaneous">&#182;</a></h2><ul>
+<li><code>scikit</code>: neural networks </li>
+<li><code>matplotlib</code>: more powerful data visualization</li>
+</ul>
+
 </div>
 </div>
 </div></section></section><section><section>
