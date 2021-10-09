@@ -13336,7 +13336,7 @@ lot of demand for Python</li>
 <li>Python is one of the most promising programming language released in 1991 by <code>Guido Van Rossum</code>.</li>
 <li>It is useful for creation of web applications, for software development, and now a lot in data science and constantly evolving.</li>
 <li>It has an easy <code>syntax</code> similar to English, simple to read and write.</li>
-<li>The most recent major version of Python is <code>Python 3</code> although Python 2 is still used majorly inside mac systems for development.</li>
+<li>The most recent major version of Python is <code>Python 3.10</code> although Python 2 is still used majorly inside mac systems for development.</li>
 <li>We can use Python via <code>command line</code>, IDE's like <code>PyCharm</code>, or applications such as <code>Jupyter Notebook</code>. </li>
 <li>Python works on all the different platforms like <code>Windows, Mac, Linux</code>.</li>
 </ul>
@@ -13368,12 +13368,10 @@ lot of demand for Python</li>
 <ul>
 <li><strong><code>numpy</code></strong>: Arrays, Universal Functions (Vectorized), Random numbers (Simulations)</li>
 <li><strong><code>pandas</code></strong>: DataFrames, Data Manipulation</li>
-<li><strong><code>scipy</code></strong>: Stats functions, optimize functions</li>
-<li><strong><code>seaborn</code></strong>: Visualization</li>
 <li>Miscellaneous</li>
 </ul>
 </li>
-<li><p><strong>Exercises</strong></p>
+<li><p><strong>Quiz</strong></p>
 </li>
 </ul>
 
@@ -13384,10 +13382,10 @@ lot of demand for Python</li>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Let's-get-Started">Let's get Started<a class="anchor-link" href="#Let's-get-Started">&#182;</a></h2><ul>
-<li>We will be working on Jupyter Notebook to open a <code>Practice.ipynb</code> located in the <a href="https://github.com/suryaeada9/ucsas_intro_python">Github UCSAS 2021</a>.</li>
+<li>We will be working on Jupyter Notebook. </li>
+<li>Open <code>Practice.ipynb</code> located in the <a href="https://github.com/suryaeada9/ucsas_intro_python">Github UCSAS 2021</a>.</li>
 <li>Download the file <code>Practice.ipynb</code></li>
 <li>Open a Jupyter notebook from Anaconda GUI or from command line using command <code>jupyter notebook</code></li>
-<li>Open the <code>Practice.ipynb</code> file</li>
 </ul>
 
 </div>
@@ -15753,8 +15751,8 @@ Inverse: np.linalg.inv()
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
-<span class="n">data</span><span class="o">.</span><span class="n">values</span>
-<span class="n">data</span><span class="o">.</span><span class="n">index</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15805,7 +15803,7 @@ Inverse: np.linalg.inv()
 <span class="n">states</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;population&#39;</span><span class="p">:</span> <span class="n">population</span><span class="p">,</span>
  <span class="s1">&#39;area&#39;</span><span class="p">:</span> <span class="n">area</span><span class="p">})</span>
 
-<span class="n">states</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">states</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15908,12 +15906,10 @@ Inverse: np.linalg.inv()
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">states</span><span class="p">[</span><span class="s1">&#39;density&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="n">states</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">states</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span>
-<span class="n">states</span>
-
 
 <span class="c1">## implicit and explicit index</span>
 <span class="n">states</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">states</span><span class="o">.</span><span class="n">loc</span><span class="p">[:</span><span class="s1">&#39;Florida&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">,</span> <span class="s1">&#39;density&#39;</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">states</span><span class="o">.</span><span class="n">loc</span><span class="p">[:</span><span class="s1">&#39;Florida&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">,</span> <span class="s1">&#39;density&#39;</span><span class="p">]])</span>
 </pre></div>
 
     </div>
@@ -16015,7 +16011,7 @@ Inverse: np.linalg.inv()
 <span class="nb">print</span><span class="p">(</span><span class="n">sal</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Describe:&#39;</span><span class="p">)</span>
-<span class="n">sal</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sal</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -16195,7 +16191,7 @@ Describe:
 <div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">merged</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 </pre></div>
 
     </div>
@@ -16347,7 +16343,7 @@ Describe:
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged1</span> <span class="o">=</span> <span class="n">merged</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;yearID&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="n">merged2</span> <span class="o">=</span> <span class="n">merged</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;teamID&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">merged1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">merged1</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 </pre></div>
 
     </div>
